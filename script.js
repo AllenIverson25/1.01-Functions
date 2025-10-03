@@ -12,7 +12,13 @@ function render (html) {
 */
 function greet () {
   // TODO: Write your code here
+  const name = prompt("What is your actual real life name?")
+  if (!name) {
+    render("<h1> Do you not have a name? You left this blank! </h1>")
+  return 
 }
+render (`<p> Hello, ${name}! Nice to meet you! </p>`)
+  } 
 
 /* 
   Function 2 — averageNumbers()
@@ -35,6 +41,19 @@ function averageNumbers () {
 */
 function timeOfDay () {
   // TODO: Write your code here
+
+  const h = new Date().getHours()
+  let msg = ''
+
+  if (h < 12) {
+    msg = 'Good Morning!'
+  } else if (h < 18) {
+    msg = 'Good Afternoon!'
+  } else {
+    msg = 'Good Evening!'
+  }
+
+  render(`<p>${msg}</p>`)
 }
 
 /* 
@@ -47,8 +66,25 @@ function timeOfDay () {
 */
 function randomBetween () {
   // TODO: Write your code here
-}
+const min = parseInt(prompt('Enter the minimum number:'))
+const max = parseInt(prompt('Enter the maximum number:'))
 
+ if (isNaN(min) || isNaN(max)) {
+  render('<p>Please use actual numbers! </p>')
+  return
+ }
+
+ if (min >= max) {
+  render('<p> Please make sure the minimum number is less than the max! </p>')
+  return
+ }
+
+ const rndNum = Math.floor(Math.random() * (max - min + 1)) + min
+ render(`<p> Your random number between ${min} and ${max} is ${rndNum} </p>`)
+
+
+
+}
 /* 
   Function 5 — clearOutput()
   ---------------------------
@@ -56,7 +92,8 @@ function randomBetween () {
   - Replace it with a placeholder message like "Output cleared."
 */
 function clearOutput () {
-  // TODO: Write your code here
+  document.getElementById('out').innerHTML = '<p>Output cleared.</p>'
+
 }
 
 // ---- Event listeners for the demo buttons ----
@@ -80,3 +117,4 @@ document.getElementById('btnClear').addEventListener('click', clearOutput)
   Write each function below, and don’t forget to connect each one 
   to a new button in index.html using addEventListener.
 */
+
