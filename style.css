@@ -68,3 +68,32 @@ main {
   color: #fff;
 }
 #btnClear:hover { background-color: #991b1b; }
+
+/* Challenge button styles */
+#btnChangeTitle {
+  background-color: #2563eb;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+#btnChangeTitle:hover { background-color: #1d4ed8; }
+
+#btnCycleColor {
+  background-color: #7c3aed;
+  border-color: #6d28d9;
+  color: #fff;
+}
+#btnCycleColor:hover { background-color: #6d28d9; }
+
+#btnBgColor {
+  background-color: #db2777;
+  border-color: #be185d;
+  color: #fff;
+}
+#btnBgColor:hover { background-color: #be185d; }
+
+#btnDouble {
+  background-color: #059669;
+  border-color: #047857;
+  color: #fff;
+}
+#btnDouble:hover { background-color: #047857; }

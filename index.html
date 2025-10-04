@@ -15,7 +15,7 @@
 <body>
     <header class="py-4 border-bottom bg-dark text-white">
         <div class="container">
-            <h1 class="h4 m-0">🍂 JS Functions Demo</h1>
+            <h1 id="pageTitle" class="h4 m-0">🍂 JS Functions Demo</h1>
         </div>
     </header>
 
@@ -32,6 +32,12 @@
                             <div class="col"><button id="btnRandom" class="btn w-100">Random Number</button></div>
                             <div class="col"><button id="btnClear" class="btn w-100">Clear</button></div>
                         </div>
+                        <div class="row g-2 text-center mt-2">
+                            <div class="col"><button id="btnChangeTitle" class="btn w-100">Change Page Title</button></div>
+                            <div class="col"><button id="btnCycleColor" class="btn w-100">Cycle Output Text Color</button></div>
+                            <div class="col"><button id="btnBgColor" class="btn w-100">Random Background Color</button></div>
+                            <div class="col"><button id="btnDouble" class="btn w-100">Double a Number</button></div>
+                        </div>
                         <p class="text-secondary small text-center mt-3 mb-0">
                             Click a button to run the function.
                         </p>
@@ -46,7 +52,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h2 class="h6 text-uppercase text-secondary mb-3 text-center">Output</h2>
-                        <div id="out" class="border rounded p-3 bg-light">
+                        <div id="out" class="border rounded p-3">
                             Output will appear here…
                         </div>
                     </div>
